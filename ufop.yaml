@@ -1,5 +1,6 @@
 image: ubuntu
 build_script:
+    - sudo apt-get update
     - sudo apt-get --yes install ruby
     - sudo apt-get --yes install ruby-dev
     - sudo gem sources --remove https://rubygems.org/
@@ -8,6 +9,7 @@ build_script:
     - sudo gem sources -l
     - sudo gem install sinatra --no-rdoc --no-ri
     - sudo gem install thin --no-rdoc --no-ri
+    - sudo gem install json --no-rdoc --no-ri
     - sudo mv $RESOURCE/* .
     - chmod u+x sinatra_server.rb
 run: ruby ./sinatra_server.rb
