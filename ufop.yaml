@@ -6,7 +6,6 @@ build_script:
     - sudo gem sources --remove https://rubygems.org/
     - sudo gem sources --remove http://rubygems.org/
     - sudo gem sources -a https://ruby.taobao.org/
-    - sudo gem sources -l
     - sudo gem install sinatra --no-rdoc --no-ri
     - sudo gem install thin --no-rdoc --no-ri
     - sudo gem install json --no-rdoc --no-ri
